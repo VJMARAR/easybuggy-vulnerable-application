@@ -6,7 +6,7 @@ pipeline{
       stages{
             stage('SAST scan using SonarCloud'){
                   steps{
-                        mvn clean verify sonar:sonar -Dsonar.projectKey=asbuggyweb -Dsonar.organization=asbuggyweb -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=75659ff20061eb3d1a534a337de5356a4e2933fb'
+                        mvn 'clean verify sonar:sonar -Dsonar.projectKey=asbuggyweb -Dsonar.organization=asbuggyweb -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=75659ff20061eb3d1a534a337de5356a4e2933fb'
                   }
             }
             stage('SCA using SNYK'){
